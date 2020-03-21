@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    >
+
 
     <ImageView
+        android:id="@+id/imgLoguin"
         android:layout_marginTop="60dp"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/ic_launcher_background"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_below="@+id/imgLoguin"
+        android:id="@+id/txtUsuario"
         android:hint="@string/txtusuario"
-        android:id="@+id/Usuario"
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_below="@id/txtUsuario"
+        android:id="@+id/txtPassword"
         android:hint="Ingrese su Password"
-        android:id="@+id/Contrasena"
         android:inputType="textPassword"
         android:maxLength="20"
         android:layout_marginTop="30dp"
@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_below="@+id/txtPassword"
         android:id="@+id/btnGuardar"
         android:text="Ingresar"
         android:background="@color/colorButton"
@@ -41,4 +42,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-</LinearLayout>
+</RelativeLayout>

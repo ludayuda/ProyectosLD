@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        btnGuardar.setOnClickListener {
+            val myIntent= Intent(this,RelativeVsLineActivity::class.java)
+            myIntent.putExtra("user",Usuario.text)
+            myIntent.putExtra("Contrasena",Contrasena.text)
+            startActivity(myIntent)
+
+
+
+
+
+
         }
+
+
+
+        }
+
+
     }
 
 
