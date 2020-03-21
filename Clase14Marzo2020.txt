@@ -1,0 +1,2 @@
+el archivo de manifest es el de configuracion
+en dependencias en build.grade se debe implementar los servicios web
